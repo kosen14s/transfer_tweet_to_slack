@@ -4,7 +4,7 @@ This is slack bot that transfer tweets to slack channel, writtin in golang.
 
 ## build
 
-In your go environment
+after ` go get github.com/kosen14s/tanasfer_tweet_to_slack` 
 ```
 go build -o ttts
 ```
