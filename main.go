@@ -11,6 +11,7 @@ import (
 func  PostMessageToSlack (slackApi *slack.Client, channel slack.Channel, tweetText string) error {
     /// post message
     params := slack.NewPostMessageParameters()
+    params.Username = "Twitter#Kosen14s"
     _, _, err := slackApi.PostMessage(channel.ID, tweetText, params) /// PostMessage function is changed now on github, to rewrite here when package updated
     if err != nil {
         return err
@@ -36,7 +37,7 @@ func main() {
     /// Slack Api
     channelName := os.Args[7]
     slackApi := slack.New(os.Args[5])
-    
+
     /// get channel list
     channels, err := slackApi.GetChannels(false)
     if err != nil {
