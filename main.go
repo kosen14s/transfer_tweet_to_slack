@@ -21,6 +21,7 @@ func  PostMessageToSlack (slackApi *slack.Client, channel slack.Channel, tweetTe
 func main() {
     if len(os.Args) < 8 {
         fmt.Fprintln(os.Stderr, "There are 7 arguments required. There is ConsumerKey, ConsumerSecret, UserAccessToken, UserAccessTokenSecret, SlackApiTOken, twitter search word (, spearated), SlackChannelToPostMessage")
+        return
     }
 
 
