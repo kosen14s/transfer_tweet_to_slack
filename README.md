@@ -1,7 +1,8 @@
 # transfer_tweet_to_slack
 
-This is a slack bot which posts every tweet having specific words, on slack channel.
-This bot is purely written in Golang.
+A simple slack bot which picks up tweets posted on twitter.    
+
+This bot picks up every tweet which has specific words, and post them on a slack channel. This bot is purely written in Golang.
 
 ## Build
 
