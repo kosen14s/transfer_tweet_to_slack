@@ -67,7 +67,9 @@ func main() {
         t := <-stream.C
         switch tweet := t.(type) {
         case anaconda.Tweet:
-            go PostMessageToSlack(slackApi, channel, "https://twitter.com/" + tweet.User.IdStr + "/status/" + tweet.IdStr);
+            if tweet.RetweetedStatus == nil {
+                go PostMessageToSlack(slackApi, channel, "https://twitter.com/" + tweet.User.IdStr + "/status/" + tweet.IdStr);
+            }
         }
     }
 }
